@@ -1,0 +1,12 @@
+.logo {
+  @extend %link;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+  color: #000000;
+
+  &--accent {
+    color: $accent-color;
+  }
+}

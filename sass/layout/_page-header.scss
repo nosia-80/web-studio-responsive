@@ -1,0 +1,11 @@
+.page-header {
+  position: relative;
+  min-height: 60px;
+  padding: 10px 0 9px;
+
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__container {
+  @include centeredFlex($main-axis: space-between);
+}

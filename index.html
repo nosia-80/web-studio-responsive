@@ -12,5 +12,83 @@
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- Page header -->
+    <header class="page-header">
+      <div class="container page-header__container">
+        <a class="logo" href="./" lang="en">
+          <span class="logo--accent">Web</span> Studio
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-hidden="true">
+            <use
+              class="menu-toggle__icon-menu"
+              href="./images/icons.svg#menu"
+            ></use>
+            <use
+              class="menu-toggle__icon-close"
+              href="./images/icons.svg#close"
+            ></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu" data-menu>
+          <nav>
+            <ul class="site-nav">
+              <li class="site-nav__item">
+                <a
+                  class="site-nav__link site-nav__link--active"
+                  href="./"
+                  aria-current="page"
+                >
+                  Студия
+                </a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Портфолио</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="contacts">
+            <a class="contacts__link" href="mailto:info@devstudio.com">
+              <svg
+                class="contacts__icon"
+                width="16"
+                height="12"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+            <a class="contacts__link" href="tel:+380961111111">
+              <svg
+                class="contacts__icon"
+                width="10"
+                height="15"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="./js/mobile-menu.js"></script>
+  </body>
 </html>

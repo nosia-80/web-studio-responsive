@@ -2,6 +2,26 @@
 
 @import './vendors/modern-normalize';
 
+// Utils
+
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/placeholders';
+@import './utils/mixins';
+
 // Base
 
 @import './base/typography';
+@import './base/common';
+
+// Components
+
+@import './components/logo';
+@import './components/menu-toggle';
+@import './components/mobile-menu';
+@import './components/site-nav';
+@import './components/contacts';
+
+// Layout
+
+@import './layout/page-header';

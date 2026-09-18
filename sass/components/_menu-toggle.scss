@@ -1,0 +1,37 @@
+.menu-toggle {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.menu-toggle__icon-menu,
+.menu-toggle__icon-close {
+  fill: currentColor;
+  transform-origin: center;
+  @include transition(opacity, transform);
+}
+
+.menu-toggle__icon-menu {
+  .menu-toggle--open & {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.menu-toggle__icon-close {
+  opacity: 0;
+  transform: scale(0);
+
+  .menu-toggle--open & {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
