@@ -304,13 +304,24 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  display: none;
+  z-index: 1;
   width: 100%;
   padding: 60px 0;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu--open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
 }
 
 .site-nav {
