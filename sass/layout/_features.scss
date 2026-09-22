@@ -1,0 +1,39 @@
+.features-list {
+  @extend %list;
+}
+
+.features-list__item {
+  &::before {
+    display: block;
+    content: '';
+    height: 120px;
+    margin-bottom: $item-margin;
+
+    background-color: $secondary-bg-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: $radius;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $item-margin;
+  }
+}
+
+.features-list__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  color: $title-text-color;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+$icons: 'antenna', 'clock', 'diagram', 'astronaut';
+
+@each $icon-name in $icons {
+  .features-list__item--#{$icon-name}::before {
+    background-image: url('../images/features/#{$icon-name}.svg');
+  }
+}

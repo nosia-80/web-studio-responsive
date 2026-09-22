@@ -4,9 +4,17 @@
   left: 0;
   z-index: 1;
   width: 100%;
+  max-height: calc(100dvh - var(--page-header-height));
   padding: 60px 0;
 
   text-align: center;
+  background-color: $primary-white-color;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.16);
+  overflow-y: auto;
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;

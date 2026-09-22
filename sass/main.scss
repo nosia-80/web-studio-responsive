@@ -1,6 +1,7 @@
 // Vendors
 
 @import './vendors/modern-normalize';
+@import './vendors/visually-hidden';
 
 // Utils
 
@@ -25,3 +26,4 @@
 // Layout
 
 @import './layout/page-header';
+@import './layout/features';
