@@ -31,10 +31,22 @@ p {
   @include breakpoint($mobile) {
     width: $mobile;
   }
+
+  @include breakpoint($tablet) {
+    width: $tablet;
+  }
+
+  @include breakpoint($desktop) {
+    width: $desktop;
+  }
 }
 
 // Section
 
 .section {
   padding: 60px 0;
+
+  @include breakpoint($desktop) {
+    padding: 94px 0;
+  }
 }

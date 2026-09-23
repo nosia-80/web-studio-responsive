@@ -1,29 +1,41 @@
 .mobile-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  max-height: calc(100dvh - var(--page-header-height));
-  padding: 60px 0;
+  @include limitedWidth($tablet - 1px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    max-height: calc(100dvh - var(--page-header-height));
+    padding: 60px 0;
 
-  text-align: center;
-  background-color: $primary-white-color;
-  box-shadow:
-    0 4px 8px rgba(0, 0, 0, 0.04),
-    0 2px 4px rgba(0, 0, 0, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.16);
-  overflow-y: auto;
+    text-align: center;
+    background-color: $primary-white-color;
+    box-shadow:
+      0 4px 8px rgba(0, 0, 0, 0.04),
+      0 2px 4px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.16);
+    overflow-y: auto;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
-  @include transition(opacity, visibility);
+    @include transition(opacity, visibility);
 
-  &--open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: initial;
+    &--open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: initial;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    @include centeredFlex($main-axis: space-between);
+    flex-grow: 1;
+    margin-left: 81px;
+  }
+
+  @include breakpoint($desktop) {
+    margin-left: 85px;
   }
 }

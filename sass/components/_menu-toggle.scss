@@ -6,6 +6,10 @@
 
   @include transition(color);
 
+  @include breakpoint($tablet) {
+    display: none;
+  }
+
   &:hover,
   &:focus {
     color: $accent-color;

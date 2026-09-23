@@ -4,6 +4,11 @@
   padding: 10px 0 9px;
 
   border-bottom: 1px solid #ececec;
+
+  @include breakpoint($tablet) {
+    min-height: 80px;
+    padding: 0;
+  }
 }
 
 .page-header__container {
