@@ -1,0 +1,29 @@
+.gallery-list {
+  @extend %list;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-list__item {
+  position: relative;
+  flex-basis: calc((100% - 2 * $item-margin) / 3);
+}
+
+.gallery-list__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 70px;
+  padding: 27px 24px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $primary-white-color;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: $overlay-color;
+}
