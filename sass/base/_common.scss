@@ -28,6 +28,11 @@ img {
   height: auto;
 }
 
+abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
 // Container
 
 .container {
@@ -54,6 +59,10 @@ img {
 
   @include breakpoint($desktop) {
     padding: 94px 0;
+  }
+
+  &--secondary {
+    background-color: $secondary-bg-color;
   }
 
   &--no-padding-t {
