@@ -8,13 +8,16 @@ $logo-font: 'Raleway', sans-serif;
 $primary-text-color: #757575;
 $title-text-color: #212121;
 $accent-color: #2196f3;
+$button-hover-bg-color: #188ce8;
 $primary-white-color: #ffffff;
 $secondary-bg-color: #f5f4fa;
+$dark-bg-color: #2f303a;
 $overlay-color: rgba(47, 48, 58, 0.8);
 $icon-link-color: #afb1b8;
 
 // Shadows
 
+$shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
 $shadow-layered:
   0 1px 3px rgba(0, 0, 0, 0.12),
   0 1px 1px rgba(0, 0, 0, 0.14),
