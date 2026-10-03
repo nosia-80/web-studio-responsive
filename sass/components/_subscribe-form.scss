@@ -1,0 +1,43 @@
+.subscribe-form {
+  @include breakpoint($desktop) {
+    display: flex;
+  }
+}
+
+.subscribe-form__input {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  letter-spacing: inherit;
+  line-height: 1.25;
+  color: $primary-white-color;
+
+  background-color: transparent;
+  box-shadow: $shadow;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: $radius;
+  outline: none;
+
+  @include transition(border-color);
+
+  @include breakpoint($tablet) {
+    display: block;
+    width: 450px;
+  }
+
+  @include breakpoint($desktop) {
+    width: 358px;
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}

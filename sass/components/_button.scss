@@ -17,8 +17,16 @@
 
   @include transition(background-color);
 
+  &--icon {
+    @include centeredFlex(inline-flex, null);
+  }
+
   &:hover,
   &:focus {
     background-color: $button-hover-bg-color;
   }
+}
+
+.button__icon {
+  margin-left: 10px;
 }
