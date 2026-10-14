@@ -1,0 +1,142 @@
+.application-form {
+  text-align: center;
+}
+
+.application-form__text {
+  display: block;
+  margin-bottom: 30px;
+
+  font-size: 20px;
+  line-height: 1.5;
+  color: $title-text-color;
+}
+
+.application-form__field {
+  position: relative;
+  margin-bottom: 28px;
+
+  letter-spacing: 0.01em;
+  line-height: 1.14;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.application-form__input,
+.application-form__comment {
+  width: 100%;
+  padding: 11px 15px;
+
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: inherit;
+
+  background-color: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: $radius;
+
+  @include transition(border-color);
+
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
+
+.application-form__input {
+  padding-left: 41px;
+}
+
+.application-form__comment {
+  display: block;
+  height: 120px;
+  resize: none;
+
+  &::placeholder {
+    @include transition(color);
+  }
+
+  &:focus::placeholder {
+    color: $accent-color;
+  }
+}
+
+.application-form__label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(42px, -50%) scale(1);
+
+  @include transition(color, transform);
+
+  .application-form__input:focus + &,
+  .application-form__input:not(:placeholder-shown) + & {
+    color: $accent-color;
+    transform: translate(14px, -39px) scale(0.85);
+  }
+}
+
+.application-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+
+  fill: $title-text-color;
+  transform: translateY(-50%);
+
+  @include transition(fill);
+
+  .application-form__input:focus ~ & {
+    fill: $accent-color;
+  }
+}
+
+.application-form__policy {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  cursor: pointer;
+}
+
+.application-form__policy-input {
+  appearance: none;
+  position: absolute;
+}
+
+.application-form__policy-icon {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+
+  border: 2px solid $title-text-color;
+  border-radius: 2px;
+
+  .application-form__policy-input:checked + & {
+    background-color: $accent-color;
+    background-image: url('../images/check.svg');
+    background-origin: border-box;
+    border-color: transparent;
+  }
+}
+
+.application-form__policy-text {
+  @include limitedWidth($desktop - 1px) {
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: left;
+  }
+}
+
+.application-form__policy-link {
+  color: $accent-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
