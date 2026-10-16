@@ -1092,13 +1092,14 @@ abbr {
 
 .filter__item {
   margin-top: 15px;
-}
-.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 @media screen and (min-width: 768px) {
   .filter__item {
     margin-top: 0;
+  }
+  .filter__item:last-child {
+    margin-right: 0;
   }
 }
 

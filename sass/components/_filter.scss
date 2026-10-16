@@ -26,13 +26,14 @@
 
 .filter__item {
   margin-top: 15px;
-
-  &:not(:last-child) {
-    margin-right: 8px;
-  }
+  margin-right: 8px;
 
   @include breakpoint($tablet) {
     margin-top: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
