@@ -1,0 +1,70 @@
+.filter {
+  margin-bottom: 40px;
+
+  @include breakpoint($tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include breakpoint($desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  margin-right: -8px;
+
+  @include breakpoint($tablet) {
+    justify-content: center;
+    margin-top: 0;
+    margin-right: 0;
+  }
+}
+
+.filter__item {
+  margin-top: 15px;
+
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  @include breakpoint($tablet) {
+    margin-top: 0;
+  }
+}
+
+.filter__input {
+  appearance: none;
+  position: absolute;
+}
+
+.filter__button {
+  display: block;
+  min-width: 73px;
+  padding: 6px 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  color: $title-text-color;
+
+  background-color: $secondary-bg-color;
+  border-radius: $radius;
+  cursor: pointer;
+
+  .filter__input:checked + & {
+    color: $primary-white-color;
+    background-color: $accent-color;
+  }
+
+  .filter__label:hover > &,
+  .filter__label:focus-within > & {
+    box-shadow:
+      0 3px 1px rgba(0, 0, 0, 0.1),
+      0 1px 2px rgba(0, 0, 0, 0.08),
+      0 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
