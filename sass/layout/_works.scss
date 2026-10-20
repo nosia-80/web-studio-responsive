@@ -1,0 +1,28 @@
+.works-list {
+  @extend %list;
+
+  @include breakpoint($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: calc($item-margin / -2);
+  }
+}
+
+.works-list__item {
+  &:not(:last-child) {
+    margin-bottom: $item-margin;
+  }
+
+  @include breakpoint($tablet) {
+    flex-basis: calc(100% / 2 - $item-margin);
+    margin: calc($item-margin / 2);
+
+    &:not(:last-child) {
+      margin-bottom: calc($item-margin / 2);
+    }
+  }
+
+  @include breakpoint($desktop) {
+    flex-basis: calc(100% / 3 - $item-margin);
+  }
+}

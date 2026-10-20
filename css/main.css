@@ -190,12 +190,12 @@ summary {
   overflow: hidden;
 }
 
-.page-footer__link, .contacts__link, .site-nav__link, .logo {
+.page-footer__link, .project-card__link, .contacts__link, .site-nav__link, .logo {
   color: inherit;
   text-decoration: none;
 }
 
-.clients-list, .team-list, .gallery-list, .features-list, .filter__list, .social-networks, .site-nav {
+.works-list, .clients-list, .team-list, .gallery-list, .features-list, .filter__list, .social-networks, .site-nav {
   padding-left: 0;
   margin: 0;
   list-style-type: none;
@@ -1131,6 +1131,114 @@ abbr {
           box-shadow: 0 3px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.project-card {
+  position: relative;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-card:has(:hover, :focus) {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media screen and (min-width: 768px) {
+  .project-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+}
+
+.project-card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card__descr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 3.75vmin;
+  line-height: 1.56;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  transition-property: opacity, transform, -webkit-transform;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .project-card__descr {
+    font-size: 18px;
+  }
+}
+.project-card:has(:hover, :focus) .project-card__descr {
+  opacity: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.project-card__content {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+@media screen and (min-width: 768px) {
+  .project-card__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.project-card__title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.project-card__link::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.project-card__tag {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
 .page-header {
   position: relative;
   min-height: 60px;
@@ -1618,5 +1726,36 @@ abbr {
   .page-footer__form {
     margin-top: 0;
     margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .works-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.works-list__item:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .works-list__item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+    margin: 15px;
+  }
+  .works-list__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .works-list__item {
+    -ms-flex-preferred-size: calc(33.3333333333% - 30px);
+        flex-basis: calc(33.3333333333% - 30px);
   }
 }/*# sourceMappingURL=main.css.map */
