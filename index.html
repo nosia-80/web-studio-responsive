@@ -144,42 +144,72 @@
 
           <ul class="gallery-list">
             <li class="gallery-list__item">
-              <img
-                srcset="
-                  ./images/gallery/img-1.jpg        1x,
-                  ./images/gallery/img-1@2x.jpg 2x
-                "
-                src="./images/gallery/img-1.jpg"
-                alt="Разработчик пишет код на ноутбуке"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-1.webp    1x,
+                    ./images/gallery/img-1@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/gallery/img-1.jpg    1x,
+                    ./images/gallery/img-1@2x.jpg 2x
+                  "
+                  src="./images/gallery/img-1.jpg"
+                  alt="Разработчик пишет код на ноутбуке"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="gallery-list__label">Десктопные приложения</p>
             </li>
             <li class="gallery-list__item">
-              <img
-                srcset="
-                  ./images/gallery/img-2.jpg        1x,
-                  ./images/gallery/img-2@2x.jpg 2x
-                "
-                src="./images/gallery/img-2.jpg"
-                alt="Смартфон на бело-синем фоне"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-2.webp    1x,
+                    ./images/gallery/img-2@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/gallery/img-2.jpg    1x,
+                    ./images/gallery/img-2@2x.jpg 2x
+                  "
+                  src="./images/gallery/img-2.jpg"
+                  alt="Смартфон на бело-синем фоне"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="gallery-list__label">Мобильные приложения</p>
             </li>
             <li class="gallery-list__item">
-              <img
-                srcset="
-                  ./images/gallery/img-3.jpg        1x,
-                  ./images/gallery/img-3@2x.jpg 2x
-                "
-                src="./images/gallery/img-3.jpg"
-                alt="Монитор iMac с открытым сайтом"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery/img-3.webp    1x,
+                    ./images/gallery/img-3@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+
+                <img
+                  srcset="
+                    ./images/gallery/img-3.jpg    1x,
+                    ./images/gallery/img-3@2x.jpg 2x
+                  "
+                  src="./images/gallery/img-3.jpg"
+                  alt="Монитор iMac с открытым сайтом"
+                  width="370"
+                  height="294"
+                />
+              </picture>
               <p class="gallery-list__label">Дизайнерские решения</p>
             </li>
           </ul>
@@ -196,10 +226,27 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team/photo-1/photo-1-desktop.webp    1x,
+                    ./images/team/photo-1/photo-1-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
                     ./images/team/photo-1/photo-1-desktop.jpg    1x,
                     ./images/team/photo-1/photo-1-desktop@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/photo-1/photo-1-tablet.webp    1x,
+                    ./images/team/photo-1/photo-1-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
                 />
                 <source
                   srcset="
@@ -209,11 +256,23 @@
                   media="(min-width: 768px)"
                 />
 
-                <img
+                <source
+                  srcset="
+                    ./images/team/photo-1/photo-1-mobile.webp    1x,
+                    ./images/team/photo-1/photo-1-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
                   srcset="
                     ./images/team/photo-1/photo-1-mobile.jpg    1x,
                     ./images/team/photo-1/photo-1-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+
+                <img
                   src="./images/team/photo-1/photo-1-mobile.jpg"
                   alt="Николай Кучеренко"
                 />
@@ -283,10 +342,27 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team/photo-2/photo-2-desktop.webp    1x,
+                    ./images/team/photo-2/photo-2-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
                     ./images/team/photo-2/photo-2-desktop.jpg    1x,
                     ./images/team/photo-2/photo-2-desktop@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/photo-2/photo-2-tablet.webp    1x,
+                    ./images/team/photo-2/photo-2-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
                 />
                 <source
                   srcset="
@@ -296,11 +372,23 @@
                   media="(min-width: 768px)"
                 />
 
-                <img
+                <source
+                  srcset="
+                    ./images/team/photo-2/photo-2-mobile.webp    1x,
+                    ./images/team/photo-2/photo-2-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
                   srcset="
                     ./images/team/photo-2/photo-2-mobile.jpg    1x,
                     ./images/team/photo-2/photo-2-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+
+                <img
                   src="./images/team/photo-2/photo-2-mobile.jpg"
                   alt="Ольга Иванова"
                 />
@@ -372,10 +460,27 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team/photo-3/photo-3-desktop.webp    1x,
+                    ./images/team/photo-3/photo-3-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
                     ./images/team/photo-3/photo-3-desktop.jpg    1x,
                     ./images/team/photo-3/photo-3-desktop@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/photo-3/photo-3-tablet.webp    1x,
+                    ./images/team/photo-3/photo-3-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
                 />
                 <source
                   srcset="
@@ -385,11 +490,23 @@
                   media="(min-width: 768px)"
                 />
 
-                <img
+                <source
+                  srcset="
+                    ./images/team/photo-3/photo-3-mobile.webp    1x,
+                    ./images/team/photo-3/photo-3-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
                   srcset="
                     ./images/team/photo-3/photo-3-mobile.jpg    1x,
                     ./images/team/photo-3/photo-3-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+
+                <img
                   src="./images/team/photo-3/photo-3-mobile.jpg"
                   alt="Андрей Шевченко"
                 />
@@ -459,10 +576,27 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team/photo-4/photo-4-desktop.webp    1x,
+                    ./images/team/photo-4/photo-4-desktop@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
                     ./images/team/photo-4/photo-4-desktop.jpg    1x,
                     ./images/team/photo-4/photo-4-desktop@2x.jpg 2x
                   "
                   media="(min-width: 1200px)"
+                />
+
+                <source
+                  srcset="
+                    ./images/team/photo-4/photo-4-tablet.webp    1x,
+                    ./images/team/photo-4/photo-4-tablet@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
                 />
                 <source
                   srcset="
@@ -472,11 +606,23 @@
                   media="(min-width: 768px)"
                 />
 
-                <img
+                <source
+                  srcset="
+                    ./images/team/photo-4/photo-4-mobile.webp    1x,
+                    ./images/team/photo-4/photo-4-mobile@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
                   srcset="
                     ./images/team/photo-4/photo-4-mobile.jpg    1x,
                     ./images/team/photo-4/photo-4-mobile@2x.jpg 2x
                   "
+                  media="(max-width: 767px)"
+                />
+
+                <img
                   src="./images/team/photo-4/photo-4-mobile.jpg"
                   alt="Иван Николаев"
                 />
